@@ -1,0 +1,250 @@
+/**
+ * Welcome Page Styles
+ * Based on Hobbly design system
+ */
+
+.welcomeContainer {
+  min-height: 100vh;
+  background-color: #073B3A;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Pattern Background */
+.patternOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2365FFB1' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* Main Content */
+.content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 80px;
+  gap: 80px;
+  z-index: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Left Section */
+.leftSection {
+  max-width: 780px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.header {
+  text-align: center;
+}
+
+.welcomeTitle {
+  font-size: 64px;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.1;
+  margin: 0 0 10px 0;
+}
+/* Brand row */
+.brandRow {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.brandIcon {
+  width: 120px;
+  height: 120px;
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.brandKnot {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 30% 30%, #073B3A 35%, transparent 36%),
+    radial-gradient(circle at 70% 70%, #073B3A 35%, transparent 36%),
+    radial-gradient(circle at 70% 30%, #073B3A 35%, transparent 36%),
+    radial-gradient(circle at 30% 70%, #073B3A 35%, transparent 36%);
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandName {
+  font-size: 108px;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -2px;
+  line-height: 0.9;
+}
+
+.brandCompany {
+  margin-top: 8px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #FFFFFF;
+  opacity: 0.9;
+}
+
+/* Action Section */
+.ctaRow {
+  display: flex;
+  gap: 36px;
+  margin-top: 14px;
+}
+
+.ctaCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.actionLabel {
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFFFFF;
+  opacity: 0.9;
+}
+
+.actionButton {
+  min-width: 200px;
+}
+
+/* Right Section - Hero Image */
+.rightSection {
+  display: flex;
+  justify-content: center;
+}
+
+.imageCard {
+  width: 520px;
+  height: 680px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.heroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4A90E2 0%, #87CEEB 100%);
+  position: relative;
+}
+
+.imageContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  opacity: 0.8;
+}
+
+.ship {
+  font-size: 80px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.waves {
+  font-size: 60px;
+  animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes wave {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Footer */
+.footer {
+  padding: 30px 40px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  opacity: 0.7;
+}
+
+.footerLogoIcon {
+  width: 30px;
+  height: 30px;
+  background-color: #E5FF65;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 16px;
+  color: #073B3A;
+}
+
+.footerLogoText {
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 24px;
+  }
+  .brandName { font-size: 84px; }
+  .imageCard { width: 100%; height: 520px; }
+}
+
+@media (max-width: 768px) {
+  .welcomeTitle { font-size: 40px; }
+  .brandIcon { width: 90px; height: 90px; }
+  .brandName { font-size: 56px; }
+  .brandCompany { font-size: 18px; }
+  .ctaRow { flex-direction: column; gap: 16px; }
+  .imageCard { height: 420px; }
+}
+
+@media (max-width: 480px) {
+  .content { padding: 16px; }
+  .welcomeTitle { font-size: 32px; }
+}

@@ -1,0 +1,183 @@
+/**
+ * Sidebar Component Styles
+ * Based on Hobbly design system
+ */
+
+.sidebar {
+  width: 250px;
+  background-color: #073B3A;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+/* Mobile sidebar states */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    z-index: 1000;
+    height: 100vh;
+    transition: left 0.3s ease;
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+}
+
+/* Pattern overlay */
+.patternOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FFFFFF' fill-opacity='0.03'%3E%3Cpath d='M20 20v-10h2v10h10v2h-10v10h-2v-10h-10v-2h10z'/%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* Menu navigation */
+.sidebarMenu {
+  flex: 1;
+  padding: 30px 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menuSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.menuSection:last-child {
+  margin-top: auto;
+}
+
+/* Menu items */
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 30px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.collapsed .menuItem {
+  padding: 15px;
+  justify-content: center;
+}
+
+.menuItem:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Active menu item */
+.menuItem.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menuItem.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #E5FF65;
+}
+
+/* Menu label */
+.menuLabel {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.collapsed .menuLabel {
+  display: none;
+}
+
+/* Bottom section */
+.sidebarBottom {
+  padding: 20px 30px 30px;
+  z-index: 1;
+}
+
+/* Back button */
+.backButton {
+  width: 100%;
+  background-color: rgba(229, 255, 101, 0.2);
+  border: 2px solid #E5FF65;
+  color: #FFFFFF;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.backButton:hover {
+  background-color: #E5FF65;
+  color: #073B3A;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(229, 255, 101, 0.3);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: -250px;
+    top: 80px;
+    bottom: 0;
+    z-index: 400;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .sidebar.collapsed {
+    width: 250px;
+  }
+}
+
+/* Loading states */
+.menuItem.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

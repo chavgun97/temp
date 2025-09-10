@@ -1,0 +1,185 @@
+/**
+ * Table Component Styles
+ * Based on Hobbly design system
+ */
+
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Header */
+.headerRow {
+  background: transparent;
+}
+
+.headerCell {
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  color: #021919;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Data rows */
+.dataRow {
+  background-color: #F0F0F0;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.dataRow.hoverable {
+  cursor: pointer;
+}
+
+.dataRow.hoverable:hover {
+  background-color: #E5E5E5;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dataCell {
+  padding: 20px;
+  font-size: 16px;
+  color: #021919;
+  border: none;
+}
+
+.dataCell:first-child {
+  border-radius: 12px 0 0 12px;
+}
+
+.dataCell:last-child {
+  border-radius: 0 12px 12px 0;
+}
+
+/* Loading state */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: #9B9B9B;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #E5E5E5;
+  border-top-color: #073B3A;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Empty state */
+.emptyContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: #F5F5F5;
+  border-radius: 12px;
+}
+
+.emptyMessage {
+  color: #9B9B9B;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.pageButton {
+  padding: 10px 20px;
+  border: none;
+  background-color: #E5E5E5;
+  color: #021919;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pageButton:hover:not(:disabled) {
+  background-color: #D0D0D0;
+  transform: translateY(-2px);
+}
+
+.pageButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pageButton.active {
+  background-color: #E5FF65;
+  color: #021919;
+}
+
+.pageButton.active:hover {
+  background-color: #D5EF55;
+}
+
+/* Status colors */
+.statusApproved {
+  color: #00C851;
+  font-weight: 600;
+}
+
+.statusPending {
+  color: #FFB300;
+  font-weight: 600;
+}
+
+.statusRejected {
+  color: #FF4444;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .table {
+    font-size: 14px;
+  }
+  
+  .headerCell {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+  
+  .dataCell {
+    padding: 15px;
+    font-size: 14px;
+  }
+  
+  .pageButton {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}

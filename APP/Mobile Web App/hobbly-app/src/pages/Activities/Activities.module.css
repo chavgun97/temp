@@ -1,0 +1,168 @@
+/**
+ * Activities Page Styles
+ * Based on Hobbly design system
+ */
+
+.activitiesContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #F5F5F5;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+}
+
+.contentArea {
+  flex: 1;
+  padding: 30px;
+  background-color: #FFFFFF;
+  margin: 30px 30px 30px 0;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow-y: auto;
+}
+
+.content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Page Header */
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.pageTitle {
+  font-size: 48px;
+  font-weight: 800;
+  color: #021919;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.addButton {
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+/* Table Section */
+.tableSection {
+  width: 100%;
+}
+
+/* Category Cell */
+.categoryCell {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.categoryIcon {
+  width: 40px;
+  height: 40px;
+  background-color: #F0F0F0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* Status Styles */
+.status {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.statusApproved {
+  color: #00C851;
+}
+
+.statusPending {
+  color: #FFB300;
+}
+
+.statusRejected {
+  color: #FF4444;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .pageHeader {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  .addButton {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    flex-direction: column;
+  }
+  
+  .contentArea {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  .pageTitle {
+    font-size: 36px;
+  }
+  
+  .categoryIcon {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageTitle {
+    font-size: 28px;
+  }
+  
+  .contentArea {
+    margin: 15px;
+    padding: 15px;
+  }
+}
+
+/* Loading State */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

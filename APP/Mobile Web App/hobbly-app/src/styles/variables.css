@@ -1,0 +1,72 @@
+/* Hobbly Design System Variables */
+:root {
+  /* Primary Colors */
+  --color-primary-dark: #073B3A;      /* Темно-зеленый (фон header) */
+  --color-primary: #2A7F7E;           /* Основной зеленый */
+  --color-primary-gradient: linear-gradient(180deg, #65FF81 0%, #2A7F7E 100%);
+  
+  /* Accent Colors */
+  --color-accent-green: #65FF81;      /* Яркий зеленый акцент */
+  --color-accent-yellow: #F5FF65;     /* Желтый акцент */
+  
+  /* Neutral Colors */
+  --color-dark: #021919;               /* Очень темный */
+  --color-gray: #8F8F8F;              /* Серый */
+  --color-gray-light: #E5E5E5;        /* Светло-серый */
+  --color-white: #FFFFFF;             /* Белый */
+  --color-background: #F5F5F5;        /* Фон */
+  
+  /* Text Colors */
+  --text-primary: #021919;
+  --text-secondary: #8F8F8F;
+  --text-light: #FFFFFF;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  
+  /* Font Sizes */
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-base: 16px;
+  --font-lg: 18px;
+  --font-xl: 24px;
+  --font-2xl: 32px;
+  --font-3xl: 48px;
+  
+  /* Font Weights */
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 350ms ease;
+  
+  /* Z-index */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-modal: 200;
+  --z-popover: 300;
+  --z-tooltip: 400;
+  --z-navbar: 500;
+}

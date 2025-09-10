@@ -1,0 +1,380 @@
+/**
+ * SignUp Page Styles
+ * Based on Hobbly design system
+ */
+
+.signUpContainer {
+  min-height: 100vh;
+  background-color: #073B3A;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Pattern Background */
+.patternOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2365FFB1' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* Header */
+.header {
+  padding: 30px 40px;
+  z-index: 1;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logoIcon {
+  width: 50px;
+  height: 50px;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 24px;
+  color: #073B3A;
+}
+
+.logoText {
+  color: #FFFFFF;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* Main Content */
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 0 40px 40px;
+  z-index: 1;
+}
+
+.formContainer {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 1200px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.pageTitle {
+  font-size: 48px;
+  font-weight: 800;
+  color: #073B3A;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+/* Form Layout */
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.formLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 300px;
+  gap: 40px;
+  align-items: start;
+}
+
+.leftColumn,
+.middleColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Password Note */
+.passwordNote {
+  font-size: 12px;
+  color: #9B9B9B;
+  text-align: center;
+  line-height: 1.4;
+  margin-top: -10px;
+}
+
+/* Button Group */
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.saveButton,
+.signUpButton {
+  width: 100%;
+}
+
+/* Photo Upload */
+.photoUpload {
+  width: 250px;
+  height: 250px;
+  position: relative;
+}
+
+.fileInput {
+  display: none;
+}
+
+.uploadLabel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #E5E5E5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+}
+
+.uploadLabel:hover {
+  background-color: #D5D5D5;
+}
+
+.uploadIcon {
+  margin-bottom: 10px;
+}
+
+.uploadText {
+  font-size: 16px;
+  color: #9B9B9B;
+  font-weight: 500;
+}
+
+.uploadedPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Social Section */
+.socialSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #E5E5E5;
+}
+
+.socialText {
+  font-size: 16px;
+  color: #9B9B9B;
+  font-weight: 500;
+}
+
+.socialButtons {
+  display: flex;
+  gap: 20px;
+}
+
+.socialButton {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  border: none;
+  background-color: #F0F0F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.socialButton:hover {
+  background-color: #E5E5E5;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.socialLetter {
+  font-size: 24px;
+  font-weight: 600;
+  color: #073B3A;
+}
+
+/* Footer */
+.footer {
+  padding: 30px 40px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  opacity: 0.7;
+}
+
+.footerLogoIcon {
+  width: 30px;
+  height: 30px;
+  background-color: #E5FF65;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 16px;
+  color: #073B3A;
+}
+
+.footerLogoText {
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .formLayout {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  
+  .rightColumn {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 0 20px 20px;
+  }
+  
+  .formContainer {
+    padding: 30px 20px;
+  }
+  
+  .pageTitle {
+    font-size: 36px;
+  }
+  
+  .formLayout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .photoUpload {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 20px;
+  }
+  
+  .formContainer {
+    padding: 25px 15px;
+  }
+  
+  .pageTitle {
+    font-size: 28px;
+  }
+  
+  .photoUpload {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .footer {
+    padding: 20px;
+  }
+}
+
+/* Checkbox Styles */
+.checkboxGroup {
+  margin-bottom: 20px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #E5FF65;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+.checkboxText {
+  flex: 1;
+  line-height: 1.4;
+}
+
+.fieldError {
+  color: #FF4444;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-left: 28px;
+}
+
+/* Error and Success Messages */
+.errorMessage {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background-color: rgba(255, 68, 68, 0.1);
+  border: 1px solid #FF4444;
+  border-radius: 8px;
+  color: #FF4444;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.successMessage {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background-color: rgba(34, 197, 94, 0.1);
+  border: 1px solid #22C55E;
+  border-radius: 8px;
+  color: #22C55E;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
